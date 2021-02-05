@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo">
-    <meta name="description" content="">
+    <meta name="keywords" content="Blog for FUN">
+    <meta name="description" content="CUHKSZ | CSE">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo</title>
+    <title>Ngeu&#39;s BLog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -45,7 +45,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Ngeu&#39;s BLog</span>
                 </a>
             </div>
             
@@ -144,10 +144,10 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Ngeu&#39;s BLog</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            CUHKSZ | CSE
             
         </div>
     </div>
@@ -299,7 +299,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                    subtitle
+                Ngeu Nyugk Drieng
                 
             </div>
 
@@ -311,9 +311,9 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "从来没有真正的绝境, 只有心灵的迷途",
+                                "一切都会好起来的～",
                             
-                                "Never really desperate, only the lost of the soul",
+                                "Everything will get better~",
                             
                         ],
                         startDelay: 300,
@@ -348,7 +348,7 @@
             <div class="cover-social-link">
 
 
-    <a href="mailto:120040073@link.cuhk.edu.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:yaoyucheng@link.cuhk.edu.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -391,7 +391,7 @@
         coverSlider.carousel({
             duration: Number('120'),
             fullWidth: true,
-            indicators: 'false' === 'true',
+            indicators: 'true' === 'true',
             onCycleTo() {
                 if (!initUserPressedOrDraggedActive) {
                     // console.log('initUserPressedOrDraggedActive')
@@ -403,8 +403,19 @@
 
         let carouselIntervalId;
         
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
 
         function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
             
         };
 
@@ -473,99 +484,47 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/02/02/ngeu-s-blog/">
+                    <a href="/2021/02/05/ngeu-s-test-blog/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Ngeu&#39;s Blog">
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Ngeu&#39;s TEST Blog">
                             
-                            <span class="card-title">Ngeu&#39;s Blog</span>
+                            <span class="card-title">Ngeu&#39;s TEST Blog</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
+                                这篇文章只是为了测试功能
+                            
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-05
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                Ngeu Nyugk Drieng
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Test/" class="post-category">
+                                    Test
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
                     
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/02/02/test-my-site-1/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="test_my_site">
-                            
-                            <span class="card-title">test_my_site</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-02
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Ngeu Nyugk Drieng
-                                
-                            </span>
-                        </div>
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Test/">
+                            <span class="chip bg-color">Test</span>
+                        </a>
+                        
                     </div>
-
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/02/02/test-my-site/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="test_my_site">
-                            
-                            <span class="card-title">test_my_site</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-02
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                Ngeu Nyugk Drieng
-                                
-                            </span>
-                        </div>
-                    </div>
-
                     
                 </div>
             </div>
@@ -749,7 +708,7 @@
         <div class="col s12 m4 l4 social-link social-statis">
 
 
-    <a href="mailto:120040073@link.cuhk.edu.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:yaoyucheng@link.cuhk.edu.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
